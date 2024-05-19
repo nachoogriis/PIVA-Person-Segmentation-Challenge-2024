@@ -1,0 +1,6 @@
+path: /content/PPSC-2024/data/data_train_competition
+train: images/train
+val: images/train
+
+nc: 1
+names: ['person']
