@@ -1,5 +1,8 @@
-# PPSC-2024
-### Authors: Marina Grifell Plana, Ignacio Gris Martin, Aïda Santacreu Perez
+# 💻 PPSC-2024
+### 🙋🏻‍♂️ Authors
+- **Marina Grifell Plana**
+- **Ignacio Gris Martin**
+- **Aïda Santacreu Perez**
 
 This repository has been used for the 2nd PIVA Person Segmentation Challenge (PPSC-2024) for the GCED at the Universitat Politècnica de Catalunya. Throughout this project we have worked with a person segmentation model, which has been YoloV8, in order to predict masks for different images in our dataset. 
 
