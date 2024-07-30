@@ -3,17 +3,20 @@ import os
 import cv2
 
 
-input_dir = '../data_train_competition/masks_post/train'
-output_dir = '../data_train_competition/labels/train'
+input_dir = '../data/data_train_competition/masks_post/test_split'
+output_dir = '../data/data_train_competition/labels/test_split'
 
 for j in os.listdir(input_dir):
     image_path = os.path.join(input_dir, j)
     # load the binary mask and get its contours
     mask = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     _, mask = cv2.threshold(mask, 1, 255, cv2.THRESH_BINARY)
-
-    H, W = mask.shape
-    contours, hierarchy = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    try:
+        H, W = mask.shape
+        contours, hierarchy = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    except:
+        print(f"There has been an error in file {j}")
 
     # convert the contours to polygons
     polygons = []
@@ -28,8 +31,6 @@ for j in os.listdir(input_dir):
 
     # print the polygons
     with open('{}.txt'.format(os.path.join(output_dir, j)[:-4]), 'w') as f:
-        if len(polygons) > 1:
-            print('Tomato')
         for polygon in polygons:
             for p_, p in enumerate(polygon):
                 if p_ == len(polygon) - 1:
