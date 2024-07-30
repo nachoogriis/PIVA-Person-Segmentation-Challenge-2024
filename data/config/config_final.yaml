@@ -1,7 +1,6 @@
 path: /kaggle/input/data-train/data_train_competition
 train: images/train_split/
 val: images/val_split/
-test: images/test_split/
 
 nc: 1
 names: ['person']
