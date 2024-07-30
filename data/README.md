@@ -1,4 +1,4 @@
-# DATA
+# 🗂️ DATA
 
 It has been uploaded to this folder of the repository an initial version of the used data. In case you want to work in a similar project related to person detection by using masks, here are some useful resources were you will find person image databases.
 
